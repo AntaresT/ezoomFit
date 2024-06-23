@@ -1,6 +1,7 @@
+import Link from "next/link";
 import styled from "styled-components";
 
-export const NavResponsive = styled.nav`
+export const NavResponsive = styled.div`
   display: flex;
   flex-direction: row;
   gap: 40px;
@@ -11,21 +12,20 @@ export const NavResponsive = styled.nav`
   }
 `
 
-interface ButtonProps {
-  shouldborder?: string;
-}
-
-export const ButtonIcon = styled.button<ButtonProps>`
-  align-items: center;
-  border: ${props => props.shouldborder ? props.shouldborder : 'none' };
-  border-radius: 6px;
-  background: none;
-  color: white;
+export const CustomLink = styled(Link)`
+  color: black;
   cursor: pointer;
-  display: flex;
-  
+  font-family: "Barlow", sans-serif;
+  font-size: 20px;
+`
 
-  &:hover {
-    color: green;
-  }
+export const DrawerContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+`
+
+export const Social = styled.div`
+  display: flex;
+  margin-top: 20px
 `
