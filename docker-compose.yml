@@ -1,0 +1,19 @@
+services:
+  dev: 
+    build: 
+      context: .
+      dockerfile: Dockerfile
+      target: dev
+    command: ["pnpm", "run", "dev"]
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app/
+  prod: 
+    build: 
+      context: .
+      dockerfile: Dockerfile
+      target: prod
+    command: ["pnpm", "run", "build"]
+    ports:
+      - "3000:3000"
