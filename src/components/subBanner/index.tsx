@@ -28,13 +28,25 @@ export default function SubBanner() {
     {
       title: "Lorem Ipsum dolor Sit Amet Dolor lorem ipsum",
       date: "10 de Abril",
-      color: "#42B073",
+      color: "#24BEFF",
       linkImage: SubBannerImg1,
     },
     {
       title: "Lorem Ipsum dolor Sit Amet Dolor lorem ipsum",
       date: "10 de Abril",
       color: "#42B073",
+      linkImage: SubBannerImg1,
+    },
+    {
+      title: "Lorem Ipsum dolor Sit Amet Dolor lorem ipsum",
+      date: "10 de Abril",
+      color: "#FF632D",
+      linkImage: SubBannerImg1,
+    },
+    {
+      title: "Lorem Ipsum dolor Sit Amet Dolor lorem ipsum",
+      date: "10 de Abril",
+      color: "#FFD400",
       linkImage: SubBannerImg1,
     },
   

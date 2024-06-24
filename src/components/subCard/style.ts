@@ -18,11 +18,19 @@ export const Container = styled.div<ContainerProps>`
 
   }
 
+  @media (min-width: 640px) and (max-width: 1366px) {
+    width: 255px;
+  }
+
   @media (min-width: 300px) and (max-width: 640px) {
     width: 100%;
   }
 
   img {
+    @media (min-width: 640px) and (max-width: 1366px) {
+      width: 255px;
+    }
+    
     @media (min-width: 300px) and (max-width: 640px) {
       width: 100%;
     }

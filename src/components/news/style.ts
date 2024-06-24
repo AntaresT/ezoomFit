@@ -1,6 +1,18 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
-export const Container = styled.div`
+interface ContainerProps {
+  color: string;
+}
+
+export const Container = styled.div<ContainerProps>`
+  img {
+    border-bottom: ${props => `4px solid ${props.color}`};
+
+    @media (min-width: 640px) and (max-width: 1366px) {
+      width: 250px
+    }
+  }
+
 
 `
 export const TextSection = styled.div`
@@ -15,7 +27,7 @@ export const Title = styled.h5`
   padding: 40px;
   margin: 0;
   max-width: 300px;
-  color: white;
+  color: black;
   text-align: left;
 `
 
@@ -23,7 +35,7 @@ export const Subtitle = styled.p`
   font-family: "Barlow", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: white;
+  color: black;
   line-height: 22px;
   padding-left: 40px;
   margin: 0;
