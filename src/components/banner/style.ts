@@ -19,7 +19,7 @@ export const Container = styled.div`
 export const TitleContainer = styled.div`
   align-items: end;
   display: flex;
-  position: fixed;
+  position: absolute;
   justify-content: space-between;
   flex-direction: row;
   font-family: "Barlow", sans-serif;
