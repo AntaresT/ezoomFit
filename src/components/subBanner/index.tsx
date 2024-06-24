@@ -58,7 +58,7 @@ export default function SubBanner() {
       <Container>
         {
           listSubBanner.map((item, index) => (
-            <div key={index} style={{position: "relative"}}>
+            <div key={index} style={{position: "relative", width: "100%"}}>
               <SubCard 
                 title={item.title} 
                 color={item.color} 

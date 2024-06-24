@@ -6,14 +6,13 @@ interface ContainerProps {
 
 export const Container = styled.div<ContainerProps>`
   border-top: ${props => `8px solid ${props.bordercolor}`};
-  width: 384px;
+  max-width: 384px;
   gap: 0px;
   border-radius: 0px 0px 5px 5px;
   opacity: 0px;
 
   .bg-image {
     object-fit: cover;
-    z-index: -5;
     border-radius: 0px 0px 5px 5px;
 
   }
