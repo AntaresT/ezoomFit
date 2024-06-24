@@ -1,6 +1,6 @@
 "use client"
 import News from "../news";
-import { ButtonCard, Container, ItemsContainer, SubTitle, TextContainer, Title } from "./style";
+import { ButtonCard, CardsContainer, Container, ItemsContainer, SubTitle, TextContainer, Title } from "./style";
 
 export default function Card() {
 
@@ -10,30 +10,34 @@ export default function Card() {
       subTitle: "lorem impsum lorem lorem ipsum",
       color: "#42B073",
       oddColor: true,
+    },
+    {
+      title: "Eventos",
+      subTitle: "lorem impsum lorem lorem ipsum",
+      color: "#9B836B",
+      oddColor: true,
     }
   ]
 
   return (
-    <div>
-      <Container bordercolor={"#42B073"} oddColor={true}>
-        <TextContainer>
-          <Title>Esport</Title>
-          <SubTitle>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</SubTitle>
-          <ButtonCard>Ver todo</ButtonCard>
-        </TextContainer>
-        <ItemsContainer>
-          <News />
-          <News />
-          <News />              
-        </ItemsContainer>
-      </Container>
-    </div>
-    // <>
-    //   {
-    //     data.map((item, index) => {
-          
-    //     })
-    //   }
-    // </>
+  
+    <CardsContainer>
+      {
+        data.map((item, index) => (
+          <Container bordercolor={item.color} oddColor={true} key={index}>
+            <TextContainer>
+              <Title>{item.title}</Title>
+              <SubTitle>{item.subTitle}</SubTitle>
+              <ButtonCard>Ver todo</ButtonCard>
+            </TextContainer>
+            <ItemsContainer>
+              <News color={item.color} />
+              <News color={item.color} />
+              <News color={item.color} />              
+            </ItemsContainer>
+          </Container>
+        ))
+      }
+    </CardsContainer>
   )
 }
